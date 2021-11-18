@@ -14,7 +14,10 @@ const SignUp = () => {
     e.preventDefault();
     try {if (password===repeat)
      { await axios.post('https://api.chatengine.io/users/', { username: username, secret: password },{ headers: { 'Private-Key': '5cd11a02-32cf-4ada-8e4e-0286f34baee7' } });
-      setError('User created successfully')}
+      setError('User created successfully')
+      localStorage.setItem('username', username);
+      localStorage.setItem('password', password);
+      window.location.reload();}
       else setError('Oops, incorrect credentials.')
     } catch (err) {
       setError('Oops, incorrect credentials.');
@@ -24,7 +27,7 @@ const SignUp = () => {
   return (
     <div className="wrapper">
       <div className="form">
-        <h1 className="title">Welcome to Teams</h1>
+        <h1 className="title">Sign Up form</h1>
         <form onSubmit={handleSubmit}>
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required />
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="Password" required />

@@ -38,9 +38,7 @@ const App = () => {
 			onDeleteChat={(chat) => console.log(chat)}
 			onEditMessage={(chatId, message) => console.log(chatId, message)}
 			onDeleteMessage={(chatId, message) => console.log(chatId, message)}
-    >
-      
-    </ChatEngine>
+    />
     </div>
   );
 };
