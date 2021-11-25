@@ -35,7 +35,7 @@ const Modal = () => {
             <button type="submit" className="button">
               <span>Login</span>
             </button><br/>
-            <Link to='/signup' component={SignUp} onClick={()=>setping(!ping)} style={{fontSize:'15px',color:'black'}}>Not a member? Register now</Link>
+            <Link to='/signup' onClick={()=>setping(!ping)} style={{fontSize:'15px',color:'black'}}>Not a member? Register now</Link>
           </div>
         </form>
         <h1>{error}</h1>
