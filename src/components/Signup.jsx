@@ -36,7 +36,7 @@ const SignUp = () => {
             <button type="submit" className="button">
               <span>SignUp</span>
             </button>
-            <Link to='/signup' component={SignUp} onClick={()=>setping(!ping)} style={{fontSize:'15px',color:'black'}}>Already member? Login</Link>
+            <Link to='/login' onClick={()=>setping(!ping)} style={{fontSize:'15px',color:'black'}}>Already member? Login</Link>
           </div>
         </form>
         <h1>{error}</h1>
